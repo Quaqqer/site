@@ -1,12 +1,72 @@
-/**
- * Color reference chart
- *
- *   COLOR   COMMENT
- * #2e3440        bg
- * #e5e9f0        fg
- */
-
 body {
-    background-color: #2e3440; /*bg*/
-    color: #e5e9f0; /*fg*/
+  background-color: #2e3440; /*bg*/
+  color: #e5e9f0; /*fg*/
 }
+
+p {
+  font-family: "Iosevka Web";
+}
+
+h1 {
+  font-family: "Iosevka Web";
+  color: #88c0d0; /* header */
+}
+
+h2 {
+  font-family: "Iosevka Web";
+  color: #81a1c1; /* header */
+}
+
+h3 {
+  font-family: "Iosevka Web";
+  color: #5e81ac; /* header */
+}
+
+h4 {
+  font-family: "Iosevka Web";
+  color: #5e81ac; /* header */
+}
+
+h5 {
+  font-family: "Iosevka Web";
+  color: #5e81ac; /* header */
+}
+
+h6 {
+  font-family: "Iosevka Web";
+  color: #5e81ac; /* header */
+}
+
+a:link {
+  font-family: "Iosevka Web";
+  color: #8fbcbb; /* header */
+}
+
+a:visited {
+  font-family: "Iosevka Web";
+  color: #8fbcbb; /* header */
+}
+
+@font-face {
+  font-family: "Iosevka Web";
+  font-display: swap;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  src: url("fonts/iosevka-medium.woff2") format("woff2"),
+    url("fonts/iosevka-medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Iosevka Web";
+  font-display: swap;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: italic;
+  src: url("fonts/iosevka-mediumitalic.woff2") format("woff2"),
+    url("fonts/iosevka-mediumitalic.ttf") format("truetype");
+}
+
+/*
+ * vim: tabstop=2 shiftwidth=2
+ */
