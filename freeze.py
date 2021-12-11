@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from flask_frozen import Freezer
 
-from src.app import app
+from website import app
 
 freezer = Freezer(app)
 
