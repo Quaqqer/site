@@ -17,13 +17,18 @@ def get_page(page):
 
 def basic_md_view(md_path):
     md = markdown2.markdown_path(get_page(md_path))
-    return lambda: render_template("base.html", content=md)
+
+    def render():
+        return render_template("base.html", content=md)
+
+    render.__name__ = f"page: {md_path}"
+    return render
 
 
-@app.route("/")
-def root():
-    md = markdown2.markdown_path(get_page("index.md"))
-    return render_template("base.html", content=md)
+basic_pages = {
+    "/": "index.md",
+    "/test": "test.md",
+}
 
-
-app.add_url_rule("/test", view_func=basic_md_view("test.md"))
+for url, md_path in basic_pages.items():
+    app.add_url_rule(url, view_func=basic_md_view(md_path))
