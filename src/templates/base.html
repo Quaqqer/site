@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title> {% block title %}empa.xyz{% endblock %} </title>
+        <link rel="stylesheet" href="/res/style.css">
+    </head>
+    <body>
+        {% block content %}
+        {{content | safe}}
+        {% endblock %}
+    </body>
+</html>

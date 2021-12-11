@@ -1,0 +1,12 @@
+/**
+ * Color reference chart
+ *
+ *   COLOR   COMMENT
+ * #2e3440        bg
+ * #e5e9f0        fg
+ */
+
+body {
+    background-color: #2e3440; /*bg*/
+    color: #e5e9f0; /*fg*/
+}
