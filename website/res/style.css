@@ -1,39 +1,46 @@
 body {
   background-color: #2e3440; /*bg*/
   color: #e5e9f0; /*fg*/
+
+  margin: auto;
+  max-width: 950px;
 }
 
-p {
+.content {
+  margin: 15px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Iosevka Web";
 }
 
 h1 {
-  font-family: "Iosevka Web";
   color: #88c0d0; /* header */
 }
 
 h2 {
-  font-family: "Iosevka Web";
   color: #81a1c1; /* header */
 }
 
 h3 {
-  font-family: "Iosevka Web";
   color: #5e81ac; /* header */
 }
 
 h4 {
-  font-family: "Iosevka Web";
   color: #5e81ac; /* header */
 }
 
 h5 {
-  font-family: "Iosevka Web";
   color: #5e81ac; /* header */
 }
 
 h6 {
-  font-family: "Iosevka Web";
   color: #5e81ac; /* header */
 }
 
@@ -45,6 +52,27 @@ a:link {
 a:visited {
   font-family: "Iosevka Web";
   color: #8fbcbb; /* header */
+}
+
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3b4252;
+}
+
+ul.nav li {
+  float: left;
+  font-size: 130%;
+}
+
+ul.nav li a {
+  display: block;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: #434c5e;
 }
 
 @font-face {

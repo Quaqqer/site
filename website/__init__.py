@@ -16,10 +16,9 @@ def get_page(page):
 
 
 def basic_md_view(md_path):
-    md = markdown2.markdown_path(get_page(md_path))
-
     def render():
-        return render_template("base.html", content=md)
+        md = markdown2.markdown_path(get_page(md_path))
+        return render_template("navigation.html", content=md)
 
     render.__name__ = f"page: {md_path}"
     return render
@@ -27,7 +26,7 @@ def basic_md_view(md_path):
 
 basic_pages = {
     "/": "index.md",
-    "/test": "test.md",
+    "/about": "about.md",
 }
 
 for url, md_path in basic_pages.items():
