@@ -1,3 +1,3 @@
-# Index
+# Home
 
-Greetings, this is the index.
+Hello fellow human.

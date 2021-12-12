@@ -1,3 +1,29 @@
+:root {
+  /* fg */
+  --fg: #e5e9f0;
+  --lfg: #eceff4;
+  --dfg: #d8dee9;
+
+  /* bg */
+  --bg: #2e3440;
+  --bg2: #3b4252;
+  --bg3: #434c5e;
+  --bg4: #4c566a;
+
+  /* frost */
+  --blue: #5e81ac;
+  --lblue: #81a1c1;
+  --cyan: #88c0d0;
+  --turqoise: #8fbcbb;
+
+  /* aurora */
+  --red: #bf616a;
+  --orange: #d08770:
+  --yellow: #ebcb8b;
+  --green: #a3be8c;
+  --magenta: #b48ead;
+}
+
 body {
   background-color: #2e3440; /*bg*/
   color: #e5e9f0; /*fg*/
@@ -15,29 +41,23 @@ html {
 }
 
 h1 {
-  color: #88c0d0; /* header */
+  color: var(--cyan);
 }
 
 h2 {
-  color: #81a1c1; /* header */
+  color: var(--lblue);
 }
 
-h3 {
-  color: #5e81ac; /* header */
+h3, h4, h5, h6 {
+  color: var(--blue);
 }
 
-h4, h5, h6 {
-  color: #5e81ac; /* header */
-}
-
-a:link {
-  font-family: "Iosevka Web";
-  color: #8fbcbb; /* header */
+a {
+  color: var(--turqoise);
 }
 
 a:visited {
-  font-family: "Iosevka Web";
-  color: #8fbcbb; /* header */
+  color: var(--magenta);
 }
 
 ul.nav {
@@ -59,6 +79,7 @@ ul.nav li a {
   padding: 8px 16px;
   text-decoration: none;
   background-color: #434c5e;
+  color: var(--turqoise);
 }
 
 @font-face {
