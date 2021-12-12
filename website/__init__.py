@@ -1,7 +1,7 @@
 from os import path
 
 import markdown2
-from flask import Flask, render_template
+from flask import Flask, redirect, render_template
 
 base = path.dirname(__file__)
 template_folder = path.join(base, "templates")
@@ -25,9 +25,15 @@ def basic_md_view(md_path):
 
 
 basic_pages = {
-    "/": "index.md",
+    "/home": "home.md",
     "/about": "about.md",
 }
+
+
+@app.route("/")
+def root():
+    return redirect("/home")
+
 
 for url, md_path in basic_pages.items():
     app.add_url_rule(url, view_func=basic_md_view(md_path))
