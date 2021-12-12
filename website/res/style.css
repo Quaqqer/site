@@ -10,13 +10,7 @@ body {
   margin: 15px;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+html {
   font-family: "Iosevka Web";
 }
 
@@ -32,15 +26,7 @@ h3 {
   color: #5e81ac; /* header */
 }
 
-h4 {
-  color: #5e81ac; /* header */
-}
-
-h5 {
-  color: #5e81ac; /* header */
-}
-
-h6 {
+h4, h5, h6 {
   color: #5e81ac; /* header */
 }
 
