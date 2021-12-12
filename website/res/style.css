@@ -36,30 +36,16 @@ body {
   margin: 15px;
 }
 
-html {
-  font-family: "Iosevka Web";
-}
+html { font-family: "Iosevka Web"; }
 
-h1 {
-  color: var(--cyan);
-}
+h1 { color: var(--cyan); }
+h2 { color: var(--lblue); }
+h3, h4, h5, h6 { color: var(--blue); }
 
-h2 {
-  color: var(--lblue);
-}
+a { color: var(--turqoise); }
+a:visited { color: var(--magenta); }
 
-h3, h4, h5, h6 {
-  color: var(--blue);
-}
-
-a {
-  color: var(--turqoise);
-}
-
-a:visited {
-  color: var(--magenta);
-}
-
+/* navigation */
 ul.nav {
   list-style-type: none;
   margin: 0;
@@ -67,12 +53,10 @@ ul.nav {
   overflow: hidden;
   background-color: #3b4252;
 }
-
 ul.nav li {
   float: left;
   font-size: 130%;
 }
-
 ul.nav li a {
   display: block;
   text-align: center;
@@ -82,6 +66,7 @@ ul.nav li a {
   color: var(--turqoise);
 }
 
+/* fonts */
 @font-face {
   font-family: "Iosevka Web";
   font-display: swap;
