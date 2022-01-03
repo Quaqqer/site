@@ -8,5 +8,5 @@ cd "$(dirname "$0")" || exit 1
 #rm -rf build
 
 .venv/bin/python freeze.py &&
-    rsync -azvh --delete build/ empa@empa.xyz:~/.site
+    rsync -azvh --delete build/ empa@empa.xyz:/srv/www/empa.xyz
 rm -rf build
