@@ -40,6 +40,42 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+pre {
+  white-space: pre-wrap;
+  width: fit-content;
+
+  background: var(--bg3);
+  padding: 3px 5px;
+  border-radius: 5px;
+
+  outline: var(--lblue);
+  outline-style: solid;
+  outline-width: thin;
+}
+
+pre code {
+  all: unset;
+
+  font-family: "Iosevka Web";
+
+  color: var(--lfg);
+}
+
+code {
+  font-family: "Iosevka Web";
+
+  background: var(--bg3);
+  padding: 3px 5px;
+  border-radius: 5px;
+
+  outline: var(--lblue);
+  outline-style: solid;
+  outline-width: thin;
+
+  background: var(--bg3);
+  color: var(--lfg);
+}
+
 h1 {
   color: var(--cyan);
 }

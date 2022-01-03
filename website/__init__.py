@@ -17,7 +17,10 @@ def get_page(page):
 
 def basic_md_view(md_path):
     def render():
-        md = markdown2.markdown_path(get_page(md_path))
+        md = markdown2.markdown_path(
+            get_page(md_path),
+            extras=["fenced-code-blocks", "task_list", "strike", "tables"],
+        )
         return render_template("navigation.html", content=md)
 
     render.__name__ = f"page: {md_path}"
