@@ -18,7 +18,7 @@
 
   /* aurora */
   --red: #bf616a;
-  --orange: #d08770:
+  --orange: #d08770;
   --yellow: #ebcb8b;
   --green: #a3be8c;
   --magenta: #b48ead;
@@ -36,14 +36,30 @@ body {
   margin: 15px;
 }
 
-html { font-family: "Iosevka Web"; }
+html {
+  font-family: "Roboto", sans-serif;
+}
 
-h1 { color: var(--cyan); }
-h2 { color: var(--lblue); }
-h3, h4, h5, h6 { color: var(--blue); }
+h1 {
+  color: var(--cyan);
+}
+h2 {
+  color: var(--lblue);
+}
 
-a { color: var(--turqoise); }
-a:visited { color: var(--magenta); }
+h3,
+h4,
+h5,
+h6 {
+  color: var(--blue);
+}
+
+a {
+  color: var(--turqoise);
+}
+a:visited {
+  color: var(--magenta);
+}
 
 /* navigation */
 ul.nav {
@@ -78,13 +94,39 @@ ul.nav li a {
 }
 
 @font-face {
-  font-family: "Iosevka Web";
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
   font-display: swap;
-  font-weight: 500;
-  font-stretch: normal;
+  src: url("fonts/Roboto-Regular.woff2") format("woff2"),
+    url("fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url("fonts/Roboto-Bold.woff2") format("woff2"),
+    url("fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
   font-style: italic;
-  src: url("fonts/iosevka-mediumitalic.woff2") format("woff2"),
-    url("fonts/iosevka-mediumitalic.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap;
+  src: url("fonts/Roboto-Italic.woff2") format("woff2"),
+    url("fonts/Roboto-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: bold;
+  font-display: swap;
+  src: url("fonts/Roboto-BoldItalic.woff2") format("woff2"),
+    url("fonts/Roboto-BoldItalic.ttf") format("truetype");
 }
 
 /*
