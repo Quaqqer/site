@@ -1,7 +1,7 @@
 from os import path
 
 import markdown2
-from flask import Flask, redirect, render_template
+from flask import Flask, redirect, render_template, send_from_directory
 
 base = path.dirname(__file__)
 template_folder = path.join(base, "templates")
@@ -36,6 +36,15 @@ basic_pages = {
 @app.route("/")
 def root():
     return redirect("/home")
+
+
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory(
+        res_dir,
+        "favicon.ico",
+        mimetype="image/vnd.microsoft.icon",
+    )
 
 
 for url, md_path in basic_pages.items():
