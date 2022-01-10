@@ -32,6 +32,9 @@ basic_pages = {
     "/about": "about.md",
 }
 
+for url, md_path in basic_pages.items():
+    app.add_url_rule(url, view_func=basic_md_view(md_path))
+
 
 @app.route("/")
 def root():
@@ -45,7 +48,3 @@ def favicon():
         "favicon.ico",
         mimetype="image/vnd.microsoft.icon",
     )
-
-
-for url, md_path in basic_pages.items():
-    app.add_url_rule(url, view_func=basic_md_view(md_path))
