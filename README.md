@@ -45,6 +45,5 @@ web pages and resources.
 
 ### Docker
 
-When I use docker I most often use Docker Compose. Here is an example
-configuration of how I would deploy it using Compose. A Dockerfile and a
-Docker Compose configuration is provided in this repository.
+When I use docker I most often use Docker Compose. A Dockerfile and a Docker
+Compose configuration is provided in this repository.
