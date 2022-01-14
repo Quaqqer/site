@@ -1,0 +1,9 @@
+services:
+  website:
+    container_name: website
+    build: .
+    environment:
+      - TZ=Europe/Stockholm
+    ports:
+      - 80:80
+    restart: unless-stopped
