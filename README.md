@@ -4,6 +4,9 @@ If you would like to see it in action it is deployed on
 [empa.xyz](https://empa.xyz). Please note that I lack inspiration and this
 website is very empty.
 
+The style sheet for this website is based on the very beautiful [Nord color
+palette](https://nordtheme.com).
+
 The source code for this website is very simple and could be easily adapted to
 fit your needs.
 
