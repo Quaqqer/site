@@ -1,5 +1,9 @@
 # My personal website
 
+If you would like to see it in action it is deployed on
+[empa.xyz](https://empa.xyz). Please note that I lack inspiration and this
+website is very empty.
+
 When deploying this I recommend using a reverse proxy, like nginx, to add
 caching headers for instance. I personally add cache headers to cache the static
 content in the res directory.
