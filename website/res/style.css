@@ -122,8 +122,8 @@ ul.nav li a {
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
-  src: url("fonts/iosevka-medium.woff2") format("woff2"),
-    url("fonts/iosevka-medium.ttf") format("truetype");
+  src: url("fonts/Iosevka/iosevka-medium.woff2") format("woff2"),
+    url("fonts/Iosevka/iosevka-medium.ttf") format("truetype");
 }
 
 @font-face {
@@ -131,8 +131,8 @@ ul.nav li a {
   font-style: normal;
   font-weight: normal;
   font-display: swap;
-  src: url("fonts/Roboto-Regular.woff2") format("woff2"),
-    url("fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("fonts/Roboto/Roboto-Regular.woff2") format("woff2"),
+    url("fonts/Roboto/Roboto-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -140,8 +140,8 @@ ul.nav li a {
   font-style: normal;
   font-weight: bold;
   font-display: swap;
-  src: url("fonts/Roboto-Bold.woff2") format("woff2"),
-    url("fonts/Roboto-Bold.ttf") format("truetype");
+  src: url("fonts/Roboto/Roboto-Bold.woff2") format("woff2"),
+    url("fonts/Roboto/Roboto-Bold.ttf") format("truetype");
 }
 
 @font-face {
@@ -149,8 +149,8 @@ ul.nav li a {
   font-style: italic;
   font-weight: normal;
   font-display: swap;
-  src: url("fonts/Roboto-Italic.woff2") format("woff2"),
-    url("fonts/Roboto-Italic.ttf") format("truetype");
+  src: url("fonts/Roboto/Roboto-Italic.woff2") format("woff2"),
+    url("fonts/Roboto/Roboto-Italic.ttf") format("truetype");
 }
 
 @font-face {
@@ -158,8 +158,8 @@ ul.nav li a {
   font-style: italic;
   font-weight: bold;
   font-display: swap;
-  src: url("fonts/Roboto-BoldItalic.woff2") format("woff2"),
-    url("fonts/Roboto-BoldItalic.ttf") format("truetype");
+  src: url("fonts/Roboto/Roboto-BoldItalic.woff2") format("woff2"),
+    url("fonts/Roboto/Roboto-BoldItalic.ttf") format("truetype");
 }
 
 /*
