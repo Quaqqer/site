@@ -29,6 +29,7 @@ def basic_md_view(md_path):
 
 basic_pages = {
     "/home": "home.md",
+    "/projects": "projects.md",
     "/about": "about.md",
 }
 
