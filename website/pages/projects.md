@@ -26,19 +26,6 @@
     <b>Github</b>: <a href="https://github.com/Quaqqer/aoc/">github.com/Quaqqer/aoc</a>
   </div>
   <div class="grid-item">
-    <h2>Snake written in Rust</h2>
-    <p>
-      This was just a simple project I did because I wanted to do something
-      relatively fun. The game is of course very simple but I had fun both
-      applying my knowledge of rust as well as learning the terminal interface
-      library ncurses.
-    </p>
-    <img src="https://raw.githubusercontent.com/Quaqqer/rust-snake/master/screenshot.png" style="width: 350px; display: block; margin: auto;">
-    <p>
-      <b>Github</b>: <a href="https://github.com/Quaqqer/rust-snake/">github.com/Quaqqer/rust-snake</a>
-    </p>
-  </div>
-  <div class="grid-item">
     <h2>Servers</h2>
     <p>
       I currently have 2 servers, one at home and one VPS at Hetzner. Both are
@@ -61,6 +48,19 @@
     <p>
       Unfortunately I don't share my server configurations publicly because they
       contain private information, such as ssh public keys.
+    </p>
+  </div>
+  <div class="grid-item">
+    <h2>Snake written in Rust</h2>
+    <p>
+      This was just a simple project I did because I wanted to do something
+      relatively fun. The game is of course very simple but I had fun both
+      applying my knowledge of rust as well as learning the terminal interface
+      library ncurses.
+    </p>
+    <img src="https://raw.githubusercontent.com/Quaqqer/rust-snake/master/screenshot.png" style="width: 350px; display: block; margin: auto;">
+    <p>
+      <b>Github</b>: <a href="https://github.com/Quaqqer/rust-snake/">github.com/Quaqqer/rust-snake</a>
     </p>
   </div>
 </div>
