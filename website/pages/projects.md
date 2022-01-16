@@ -45,10 +45,6 @@
       one of them. I also run a Minecraft server, but not in Docker. On my VPS I
       run lighter services such as this website.
     </p>
-    <p>
-      Unfortunately I don't share my server configurations publicly because they
-      contain private information, such as ssh public keys.
-    </p>
   </div>
   <div class="grid-item">
     <h2>Snake written in Rust</h2>
