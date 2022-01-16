@@ -53,10 +53,9 @@
   <div class="grid-item">
     <h2>Snake written in Rust</h2>
     <p>
-      This was just a simple project I did because I wanted to do something
-      relatively fun. The game is of course very simple but I had fun both
-      applying my knowledge of rust as well as learning the terminal interface
-      library ncurses.
+      This was just a simple project I did because I wanted to do something fun.
+      The game is of course very simple but I had fun both applying my knowledge
+      of rust as well as learning the terminal interface library ncurses.
     </p>
     <img src="https://raw.githubusercontent.com/Quaqqer/rust-snake/master/screenshot.png" style="width: 350px; display: block; margin: auto;">
     <p>
