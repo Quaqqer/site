@@ -138,6 +138,7 @@ ul.nav li a:hover {
   padding: 20px;
   border-radius: 5px;
   background-color: var(--bg2);
+  overflow: hidden;
 }
 
 .grid-item img {

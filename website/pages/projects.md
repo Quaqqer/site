@@ -33,8 +33,10 @@
       applying my knowledge of rust as well as learning the terminal interface
       library ncurses.
     </p>
-    <img src="https://raw.githubusercontent.com/Quaqqer/rust-snake/master/screenshot.png" style="width: 350px; display: block; margin: auto; padding: 15px;">
-    <b>Github</b>: <a href="https://github.com/Quaqqer/rust-snake/">github.com/Quaqqer/rust-snake</a>
+    <img src="https://raw.githubusercontent.com/Quaqqer/rust-snake/master/screenshot.png" style="width: 350px; display: block; margin: auto;">
+    <p>
+      <b>Github</b>: <a href="https://github.com/Quaqqer/rust-snake/">github.com/Quaqqer/rust-snake</a>
+    </p>
   </div>
   <div class="grid-item">
     <h2>Servers</h2>
