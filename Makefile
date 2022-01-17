@@ -1,5 +1,6 @@
 VENV_PATH = .venv
 PYTHON = $(VENV_PATH)/bin/python
+TARGET = empa@empa.xyz:/srv/www/empa.xyz
 
 .PHONY: debug build deploy
 
@@ -10,7 +11,7 @@ freeze: clean-freeze
 	$(PYTHON) freeze.py
 
 deploy: freeze
-	rsync -azvh --delete build/ empa@empa.xyz:/srv/www/empa.xyz
+	rsync -azvh --delete build/ $(TARGET)
 
 clean-freeze:
 	rm -rf build
