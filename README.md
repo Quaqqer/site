@@ -39,7 +39,7 @@ serving it with a webserver such as nginx or hosting it with docker.
 
 ### Generating static content
 
-To generate static content simply run `freeze.py` from within your python
+To generate static content simply run `make freeze` from within your python
 environment. This will generate a directory called `build` that contains all
 web pages and resources.
 
