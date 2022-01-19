@@ -28,6 +28,10 @@ export class Renderer {
 
     private drawSnake() {
         this.drawTile(this.gs.snake.pos, colors.SNAKE)
+
+        for (let segment of this.gs.snake.segments) {
+            this.drawTile(segment, colors.SNAKE)
+        }
     }
 
     private internal_render() {
