@@ -34,9 +34,16 @@ export class Renderer {
         }
     }
 
+    private drawFruit() {
+        for (let fruit of this.gs.fruit) {
+            this.drawTile(fruit, colors.FRUIT)
+        }
+    }
+
     private internal_render() {
         this.drawBackground()
         this.drawSnake()
+        this.drawFruit()
     }
 
     public render() {

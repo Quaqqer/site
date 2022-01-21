@@ -50,13 +50,35 @@ export class Snake {
 
         this.pos = this.pos.added(dirToVec(this.dir))
     }
+
+    public containsPoint(point: Point): boolean {
+        return this.pos.equals(point) || this.segments.findIndex((segment) => { segment.equals(point) }) != -1
+    }
 }
 
 export class GameState {
-    public snake: Snake
+    public readonly snake: Snake
+    public readonly fruit: Point[] = []
 
     constructor(public readonly width: number, public readonly height: number) {
         this.snake = new Snake(new Vector2(Math.floor(width / 2), Math.floor(height / 2)))
+        this.fruit.push(this.findEmptySpace())
+    }
+
+    private findEmptySpace(): Point {
+        let p: Point
+
+        do {
+            let x = Math.floor(Math.random() * this.width)
+            let y = Math.floor(Math.random() * this.height)
+            p = new Vector2(x, y)
+        } while (this.isOccupied(p))
+
+        return p
+    }
+
+    private isOccupied(point: Point): boolean {
+        return this.snake.containsPoint(point)
     }
 
     public update() {
