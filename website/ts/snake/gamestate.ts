@@ -83,6 +83,17 @@ export class GameState {
 
     public update() {
         this.snake.move()
+        this.eatFruit()
+    }
+
+    private eatFruit() {
+        for (let i = 0; i < this.fruit.length; i++) {
+            if (this.snake.containsPoint(this.fruit[i])) {
+                this.snake.grow()
+
+                this.fruit[i] = this.findEmptySpace()
+            }
+        }
     }
 
     public updateInput(e: KeyboardEvent) {
