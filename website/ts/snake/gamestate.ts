@@ -27,6 +27,7 @@ export class Snake {
     public segments: Point[] = []
     private enqueued_grows: number = 2
     public dir: Direction = Direction.None
+    public isDead: boolean = false
 
     constructor(public pos: Point) { }
 
@@ -35,6 +36,8 @@ export class Snake {
     }
 
     public move() {
+        if (this.isDead) return
+
         if (this.segments.length != 0) {
             this.segments.splice(0, 0, this.pos)
 
@@ -49,10 +52,16 @@ export class Snake {
         }
 
         this.pos = this.pos.added(dirToVec(this.dir))
+
+        if (this.tailContainsPoint(this.pos)) this.isDead = true
     }
 
     public containsPoint(point: Point): boolean {
-        return this.pos.equals(point) || this.segments.findIndex((segment) => { segment.equals(point) }) != -1
+        return this.pos.equals(point) || this.tailContainsPoint(point)
+    }
+
+    private tailContainsPoint(point: Point): boolean {
+        return this.segments.findIndex((seg) => seg.equals(point)) != -1
     }
 }
 
