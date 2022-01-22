@@ -76,9 +76,9 @@ export class Renderer {
         this.ctx.fillStyle = colors.FG;
         this.ctx.fillText(
             "Score: " + this.gs.score.toString(),
-            0,
+            5,
             TILES_V * TILE_SIZE + 35,
-            TILES_H * TILE_SIZE
+            TILES_H * TILE_SIZE - 10
         );
     }
 
