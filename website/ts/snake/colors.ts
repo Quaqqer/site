@@ -1,4 +1,4 @@
-export const SNAKE: string = "#00ff00"
-export const FRUIT: string = "#ff0000"
-export const BACKGROUND: string = "#000000"
-export const WALL: string = "#808080"
+export const SNAKE: string = "#a3be8c"
+export const FRUIT: string = "#bf616a"
+export const BACKGROUND: string = "#3b4252"
+export const WALL: string = "#434c5e"

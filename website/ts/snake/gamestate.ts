@@ -1,4 +1,4 @@
-import { Vector2, Point } from "./vector"
+import { Vector2, Point, Rect } from "./vector"
 
 export enum Direction {
     Up,
@@ -29,17 +29,17 @@ export class Snake {
     public dir: Direction = Direction.None
     public isDead: boolean = false
 
-    constructor(public pos: Point) { }
+    constructor(public head: Point) { }
 
     public grow() {
         this.enqueued_grows++
     }
 
-    public move() {
+    public move(boardRect: Rect) {
         if (this.isDead) return
 
         if (this.segments.length != 0) {
-            this.segments.splice(0, 0, this.pos)
+            this.segments.splice(0, 0, this.head)
 
             if (this.enqueued_grows > 0 && this.dir != Direction.None) {
                 this.enqueued_grows--
@@ -47,17 +47,18 @@ export class Snake {
                 this.segments.pop()
             }
         } else if (this.enqueued_grows > 0 && this.dir != Direction.None) {
-            this.segments.push(this.pos)
+            this.segments.push(this.head)
             this.enqueued_grows--
         }
 
-        this.pos = this.pos.added(dirToVec(this.dir))
+        this.head = this.head.added(dirToVec(this.dir))
 
-        if (this.tailContainsPoint(this.pos)) this.isDead = true
+        if (this.tailContainsPoint(this.head) || !boardRect.contains(this.head))
+            this.isDead = true
     }
 
     public containsPoint(point: Point): boolean {
-        return this.pos.equals(point) || this.tailContainsPoint(point)
+        return this.head.equals(point) || this.tailContainsPoint(point)
     }
 
     private tailContainsPoint(point: Point): boolean {
@@ -68,10 +69,12 @@ export class Snake {
 export class GameState {
     public readonly snake: Snake
     public readonly fruit: Point[] = []
+    private boardRect: Rect
 
     constructor(public readonly width: number, public readonly height: number) {
         this.snake = new Snake(new Vector2(Math.floor(width / 2), Math.floor(height / 2)))
         this.fruit.push(this.findEmptySpace())
+        this.boardRect = new Rect(new Vector2(0, 0), new Vector2(width - 1, height - 1))
     }
 
     private findEmptySpace(): Point {
@@ -91,7 +94,7 @@ export class GameState {
     }
 
     public update() {
-        this.snake.move()
+        this.snake.move(this.boardRect)
         this.eatFruit()
     }
 
