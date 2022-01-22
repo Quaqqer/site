@@ -47,6 +47,20 @@
     </p>
   </div>
   <div class="grid-item">
+    <h2>Snake written in TypeScript</h2>
+    <p>
+      Another Snake game that I wrote in TypeScript this time. The game is
+      available for play on this very website at
+      <a href="https://empa.xyz/snake">empa.xyz/snake</a>. I did this to mainly
+      experiment with TypeScript, which I found quite nice. I first compile it
+      to JavaScript with the TypeScript compiler and then pack it for the web
+      with webpack.
+    </p>
+    <p>
+      <b>Github</b>: <a href="https://github.com/Quaqqer/site/tree/master/website/ts/snake">github.com/Quaqqer/site/website/ts/snake</a>
+    </p>
+  </div>
+  <div class="grid-item">
     <h2>Snake written in Rust</h2>
     <p>
       This was just a simple project I did because I wanted to do something fun.
