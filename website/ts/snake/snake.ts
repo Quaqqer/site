@@ -11,10 +11,19 @@ async function run() {
     let gs = new GameState(width, height);
     let renderer = new Renderer(gs, canvas);
 
+    let timeout: number | null = null;
+    let handler: Function | null = null;
+
     window.addEventListener(
         "keydown",
         (e) => {
             gs.updateInput(e);
+
+            // End timeout early
+            if (handler != null) {
+                clearTimeout(timeout);
+                handler();
+            }
         },
         false
     );
@@ -23,7 +32,11 @@ async function run() {
         gs.update();
         renderer.render();
 
-        await new Promise((r) => setTimeout(r, 200));
+        await new Promise((r) => {
+            handler = r;
+            timeout = setTimeout(r, 200);
+            return timeout;
+        });
     }
 }
 
