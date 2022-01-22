@@ -10,6 +10,12 @@ export class Renderer {
     private ctx: CanvasRenderingContext2D;
     constructor(private readonly gs: GameState, canvas: HTMLCanvasElement) {
         this.ctx = canvas.getContext("2d");
+
+        this.initalize();
+    }
+
+    private initalize() {
+        this.ctx.font = "30px Arial";
     }
 
     private drawTile(pos: Point, color: string) {
@@ -36,6 +42,12 @@ export class Renderer {
         this.ctx.fillStyle = colors.BACKGROUND;
         this.ctx.fill();
         this.ctx.closePath();
+
+        this.ctx.beginPath();
+        this.ctx.rect(0, 480, 480, 50);
+        this.ctx.fillStyle = colors.WALL;
+        this.ctx.fill();
+        this.ctx.closePath();
     }
 
     private drawSnake() {
@@ -56,6 +68,18 @@ export class Renderer {
         this.drawBackground();
         this.drawSnake();
         this.drawFruit();
+
+        this.drawScore();
+    }
+
+    drawScore() {
+        this.ctx.fillStyle = colors.FG;
+        this.ctx.fillText(
+            "Score: " + this.gs.score.toString(),
+            0,
+            TILES_V * TILE_SIZE + 35,
+            TILES_H * TILE_SIZE
+        );
     }
 
     public render() {

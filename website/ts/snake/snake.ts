@@ -1,12 +1,12 @@
-import { TILE_SIZE, Renderer } from "./renderer";
+import { TILES_H, TILES_V, Renderer } from "./renderer";
 import { GameState } from "./gamestate";
 
 async function run() {
     const canvas = document.getElementById("snakeCanvas") as HTMLCanvasElement;
     const window = document.defaultView;
 
-    let width = Math.floor(canvas.width / TILE_SIZE);
-    let height = Math.floor(canvas.height / TILE_SIZE);
+    let width = TILES_H;
+    let height = TILES_V;
 
     let gs = new GameState(width, height);
     let renderer = new Renderer(gs, canvas);

@@ -36,8 +36,16 @@ export class Snake {
     }
 
     public move(boardRect: Rect) {
+        // Already dead, don't move
         if (this.isDead) return;
 
+        // Will collide with wall
+        if (!boardRect.contains(this.head.added(dirToVec(this.dir)))) {
+            this.isDead = true;
+            return;
+        }
+
+        // Move tail
         if (this.segments.length != 0) {
             this.segments.splice(0, 0, this.head);
 
@@ -51,9 +59,11 @@ export class Snake {
             this.enqueued_grows--;
         }
 
+        // Move head
         this.head = this.head.added(dirToVec(this.dir));
 
-        if (this.tailContainsPoint(this.head) || !boardRect.contains(this.head))
+        // If collides with tail -> die
+        if (this.tailContainsPoint(this.head))
             this.isDead = true;
     }
 
@@ -70,6 +80,7 @@ export class GameState {
     public readonly snake: Snake;
     public readonly fruit: Point[] = [];
     private boardRect: Rect;
+    public score: number = 0;
 
     constructor(public readonly width: number, public readonly height: number) {
         this.snake = new Snake(
@@ -100,17 +111,25 @@ export class GameState {
 
     public update() {
         this.snake.move(this.boardRect);
-        this.eatFruit();
+        let eaten = this.eatFruit();
+
+        if (eaten) {
+            this.score += 10;
+        }
     }
 
-    private eatFruit() {
+    private eatFruit(): boolean {
+        let eaten = 0;
+
         for (let i = 0; i < this.fruit.length; i++) {
             if (this.snake.containsPoint(this.fruit[i])) {
+                eaten++;
                 this.snake.grow();
-
                 this.fruit[i] = this.findEmptySpace();
             }
         }
+
+        return eaten > 0;
     }
 
     public updateInput(e: KeyboardEvent) {
