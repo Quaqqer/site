@@ -34,7 +34,7 @@ async function run() {
 
         await new Promise((r) => {
             handler = r;
-            timeout = setTimeout(r, 200);
+            timeout = setTimeout(r, gs.updateTime());
             return timeout;
         });
     }

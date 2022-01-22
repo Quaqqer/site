@@ -148,4 +148,8 @@ export class GameState {
                 break;
         }
     }
+
+    public updateTime(): number {
+        return 50 + 150 * (1/Math.pow(1 + (this.score/70), 1/3));
+    }
 }
