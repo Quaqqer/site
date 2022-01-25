@@ -1,6 +1,6 @@
 from os import path
 
-import markdown2
+import markdown
 from flask import Flask, redirect, render_template, send_from_directory
 
 base = path.dirname(__file__)
@@ -9,7 +9,7 @@ res_dir = path.join(base, "res")
 pages_dir = path.join(base, "pages")
 
 app = Flask("empaxyz", template_folder=template_folder, static_folder=res_dir)
-
+md = markdown.Markdown(extensions=["fenced_code", "sane_lists", "tables"])
 
 def get_page(page):
     return path.join(pages_dir, page)
@@ -17,12 +17,8 @@ def get_page(page):
 
 def basic_md_view(md_path):
     def render():
-        md = markdown2.markdown_path(
-            get_page(md_path),
-            extras=["fenced-code-blocks", "task_list", "strike", "tables"],
-        )
-        return render_template("navigation.html", content=md)
-
+        with open(get_page(md_path), "r") as file:
+            return render_template("navigation.html", content=md.convert(file.read()))
     render.__name__ = f"page: {md_path}"
     return render
 
